@@ -469,10 +469,9 @@ const getLineTotal = (item) => {
 }
 
 const formatCurrency = (amount) => {
-  const locale = form.value.currency === 'JPY' ? 'ja-JP' : 'ms-MY'
   const fractionDigits = form.value.currency === 'JPY' ? 0 : 2
   
-  return new Intl.NumberFormat(locale, {
+  return new Intl.NumberFormat('en-US', {
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits
   }).format(amount)

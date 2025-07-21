@@ -349,10 +349,9 @@ const visiblePages = computed(() => {
 
 // Methods
 const formatCurrency = (amount, currency = 'MYR') => {
-  const locale = currency === 'JPY' ? 'ja-JP' : 'ms-MY'
   const fractionDigits = currency === 'JPY' ? 0 : 2
   
-  return new Intl.NumberFormat(locale, {
+  return new Intl.NumberFormat('en-US', {
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits
   }).format(amount)

@@ -436,10 +436,9 @@ const currencySymbol = computed(() => currency.value === 'JPY' ? '¥' : 'RM')
 
 // Methods
 const formatCurrency = (amount) => {
-  const locale = currency.value === 'JPY' ? 'ja-JP' : 'ms-MY'
   const fractionDigits = currency.value === 'JPY' ? 0 : 2
   
-  return new Intl.NumberFormat(locale, {
+  return new Intl.NumberFormat('en-US', {
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits
   }).format(amount)
