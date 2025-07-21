@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+
+# Editor directories
+.vscode/*
+.idea
+
+# PDF files (generated)
+*.pdf
+!template*.pdf
+!optimized*.pdf
