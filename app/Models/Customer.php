@@ -13,7 +13,11 @@ class Customer extends Model
         'contact_person',
         'email',
         'phone',
-        'address'
+        'address',
+        'address2',
+        'city',
+        'state',
+        'postal_code'
     ];
 
     public function quotations()

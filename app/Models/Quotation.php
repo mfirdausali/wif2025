@@ -21,6 +21,10 @@ class Quotation extends Model
         'customer_id',
         'quotation_date',
         'status',
+        'currency',
+        'conversion_rate',
+        'payment_terms',
+        'notes',
         'total_amount',
     ];
 
@@ -32,6 +36,8 @@ class Quotation extends Model
     protected $casts = [
         'quotation_date' => 'date',
         'total_amount' => 'decimal:2',
+        'conversion_rate' => 'decimal:4',
+        'notes' => 'array',
     ];
 
     /**
